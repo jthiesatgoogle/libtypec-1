@@ -102,11 +102,11 @@ enum product_type get_partner_product_type(short rev, uint32_t id)
 
     char dfp_supported = 0;
     if ((id & pd_dfp_product_type_mask) == pd3p0_dfp_hub)
-      ufp_supported = 1;
+      dfp_supported = 1;
     else if ((id & pd_dfp_product_type_mask) == pd3p0_dfp_host)
-      ufp_supported = 1;
+      dfp_supported = 1;
     else if ((id & pd_dfp_product_type_mask) == pd3p0_power_brick)
-      ufp_supported = 1;
+      dfp_supported = 1;
 
     if (ufp_supported && dfp_supported)
       return product_type_pd3p0_drd;
@@ -128,11 +128,11 @@ enum product_type get_partner_product_type(short rev, uint32_t id)
 
     char dfp_supported = 0;
     if ((id & pd_dfp_product_type_mask) == pd3p1_dfp_hub)
-      ufp_supported = 1;
+      dfp_supported = 1;
     else if ((id & pd_dfp_product_type_mask) == pd3p1_dfp_host)
-      ufp_supported = 1;
+      dfp_supported = 1;
     else if ((id & pd_dfp_product_type_mask) == pd3p1_power_brick)
-      ufp_supported = 1;
+      dfp_supported = 1;
 
     if (ufp_supported && dfp_supported)
       return product_type_pd3p1_drd;
